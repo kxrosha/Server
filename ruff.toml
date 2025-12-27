@@ -1,0 +1,74 @@
+# Длина строки
+line-length = 120
+
+# Разрешать автоматическое исправление
+lint.fixable = ["ALL"]
+
+# Python версия
+preview = true
+target-version = "py311"
+
+# Правила для включения (адаптировано под FastAPI)
+lint.select = [
+    "FBT",
+    "T",
+    "G",
+    "D",
+    "E",
+    "W",
+    "F",
+    "B",
+    "SIM",
+    "C4",
+    "I",
+    "S",
+    "UP",
+    "RUF",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "ERA",
+    "LOG",
+]
+
+# Игнорируемые правила (адаптировано под проект)
+lint.ignore = [
+    "E501",
+    "PLR0913",
+    "PLR2004",
+    "E402",
+    "B008",
+    "RUF012",
+    "N818",
+    "PLR0912",
+    "PLR0915",
+    "PLR1730",
+    "S110",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "D200",
+    "D203",
+    "D205",
+    "D212",
+    "D417",
+    "FBT001",
+    "FBT002",
+    "PLR6301",
+    "PLR0911",
+]
+
+# Исключения по файлам (твоя архитектура)
+[lint.per-file-ignores]
+# Миграции Alembic
+"backend/migrations/*.py" = ["E", "F", "B", "I", "UP", "RUF", "PLC", "PLE", "PLR", "PLW", "ERA"]
+"backend/alembic/*.py" = ["E", "F", "B", "I", "UP", "RUF", "PLC", "PLE", "PLR", "PLW", "ERA"]
+
+# Тесты — разрешаем assert
+"backend/tests/**" = ["S101", "PLR2004"]
