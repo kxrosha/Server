@@ -1,0 +1,39 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальное окружение
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Логи и временные файлы
+*.log
+*.sqlite3
+*.db
+*.pid
+
+# Тестовые артефакты
+htmlcov/
+.coverage
+.coverage.*
+.cache/
+pytest_cache/
+
+# Инструменты
+.mypy_cache/
+.pytest_cache/
+ruff_cache/
+
+# IDE / редакторы
+.vscode/
+.idea/
+*.iml
+
+# Frontend
+node_modules/
+dist/
+build/
