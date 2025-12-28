@@ -16,6 +16,8 @@ dependencies = [
     "sqlalchemy>=2.0.36",                        # ORM
     "uvicorn[standard]>=0.30.6",                 # Сервер
     "pydantic-settings>=2.5.2",                  # Конфиги
+    "types-python-jose>=3.5.0.20250531",
+    "types-passlib>=1.7.7.20250602",
 ]
 
 [project.optional-dependencies]
